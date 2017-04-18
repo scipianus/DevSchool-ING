@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="eventPlanner">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/app.html">
+    <title>Event Planner</title>
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/bootstrap-css/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-css/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="vendor/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <span class="glyphicon glyphicon-calendar"></span> EventPlanner
+            </a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/myEvents">My events</a></li>
+            <li><a href="/discoverEvents">Discover</a></li>
+            <li><a href="/createEvent">Create</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ng-view></ng-view>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjo6_Tk9fuO2Crj-WIIMpCFr0VF9V9Yo&callback=initMap">
+</script>
+
+<!-- build:js js/vendor.js -->
+<!-- bower:js -->
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/firebase/firebase.js"></script>
+<script src="vendor/angularfire/dist/angularfire.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="vendor/lodash/lodash.js"></script>
+<script src="vendor/markerclustererplus/src/markerclusterer.js"></script>
+<script src="vendor/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+<script src="vendor/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+<script src="vendor/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+<script src="vendor/js-rich-marker/src/richmarker.js"></script>
+<script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js js/app.js -->
+<!-- inject:js -->
+<script src="app/firebase.init.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/app.controller.js"></script>
+<script src="app/app.config.js"></script>
+<!-- endinject -->
+<!-- endbuild -->
+</body>
+</html>

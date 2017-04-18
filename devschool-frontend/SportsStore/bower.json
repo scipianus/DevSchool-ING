@@ -1,0 +1,31 @@
+{
+  "name": "SportsStore",
+  "homepage": "https://github.com/scipianus/Devschool-3",
+  "authors": [
+    "scipianus <ciprian.olariu05@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.4",
+    "angular-route": "^1.6.4",
+    "angularfire": "^2.3.0",
+    "bootstrap-css": "^3.3.7"
+  },
+  "overrides": {
+    "bootstrap-css": {
+      "main": [
+        "css/bootstrap.css",
+        "css/bootstrap-theme.css"
+      ]
+    }
+  }
+}

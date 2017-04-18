@@ -1,0 +1,7 @@
+body {
+    background: #555555 url(../assets/bg-tile.jpg);
+}
+
+.angular-google-map-container {
+    height: 600px;
+}

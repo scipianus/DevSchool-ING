@@ -1,0 +1,12 @@
+<h1 class="text-center">My events</h1>
+<div class="text-center">
+    <button ng-repeat="option in vm.options" ng-click="vm.switchCalendarView(option)"
+            class="btn btn-default text-capitalize" ng-class="vm.isCurrentOption(option)">{{option}}
+    </button>
+</div>
+<mwl-calendar
+        view="vm.calendarConfig.calendarView"
+        view-date="vm.calendarConfig.viewDate"
+        events="vm.calendarConfig.events"
+        view-title="vm.calendarConfig.calendarTitle">
+</mwl-calendar>
