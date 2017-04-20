@@ -1,0 +1,818 @@
+------Start of DE processing------ = [4/20/17 20:15:53:942 EEST]
+Exception = com.ibm.wsspi.injectionengine.InjectionException
+Source = com.ibm.ejs.container.ManagedBeanOBase.injectInstance
+probeid = 134
+Stack Dump = com.ibm.wsspi.injectionengine.InjectionException: The java:comp/env/ejb.EmployeeFacadeImpl/entityManager reference of type javax.persistence.EntityManager for the null component in the curs-6-1.0-SNAPSHOT module of the curs_6_war_exploded application cannot be resolved.
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1493)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1373)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:108)
+	at com.ibm.ws.injectionengine.AbstractInjectionEngine.inject(AbstractInjectionEngine.java:852)
+	at com.ibm.ejs.container.ManagedBeanOBase.injectInstance(ManagedBeanOBase.java:148)
+	at com.ibm.ejs.container.StatelessBeanO.injectInstance(StatelessBeanO.java:295)
+	at com.ibm.ejs.container.StatelessBeanO.initialize(StatelessBeanO.java:169)
+	at com.ibm.ejs.container.BeanOFactory.create(BeanOFactory.java:105)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:976)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:1078)
+	at com.ibm.ejs.container.activator.UncachedActivationStrategy.atActivate(UncachedActivationStrategy.java:63)
+	at com.ibm.ejs.container.activator.Activator.preInvokeActivateBean(Activator.java:264)
+	at com.ibm.ejs.container.EJSContainer.preInvokeActivate(EJSContainer.java:3239)
+	at com.ibm.ejs.container.EJSContainer.EjbPreInvoke(EJSContainer.java:2576)
+	at ejb.EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.getEmployees(EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.java)
+	at jsf.model.employee.EmployeeBean.getEmployees(EmployeeBean.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:98)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:66)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:167)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:184)
+	at org.jboss.weld.el.WeldValueExpression.getValue(WeldValueExpression.java:50)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:96)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:360)
+	at javax.faces.component.UIData.getValue(UIData.java:2145)
+	at javax.faces.component.UIData.createDataModel(UIData.java:2089)
+	at javax.faces.component.UIData.getDataModel(UIData.java:2052)
+	at javax.faces.component.UIData.getRowCount(UIData.java:488)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeInnerHtml(HtmlTableRendererBase.java:359)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeChildren(HtmlTableRendererBase.java:208)
+	at javax.faces.component.UIComponentBase.encodeChildren(UIComponentBase.java:643)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:541)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.renderView(FaceletViewDeclarationLanguage.java:1891)
+	at org.apache.myfaces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:313)
+	at javax.faces.application.ViewHandlerWrapper.renderView(ViewHandlerWrapper.java:58)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:116)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:267)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:200)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1290)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1157)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4956)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:525)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:315)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1014)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:280)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:967)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:359)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:318)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:471)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:405)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:285)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:256)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Dump of callerThis
+Object type = com.ibm.ejs.container.CMStatelessBeanO
+  serialVersionUID = 6553421454354990950
+  tc = class com.ibm.ejs.ras.TraceComponent@1a91c84d
+    strings[0] = "TraceComponent[com.ibm.ejs.container.CMStatelessBeanO,class com.ibm.ejs.container.CMStatelessBeanO,[EJBContainer],com.ibm.ejs.container.container,null]"
+  CLASS_NAME = "com.ibm.ejs.container.StatelessBeanO"
+  tc = class com.ibm.ejs.ras.TraceComponent@7b9d318f
+    strings[0] = "TraceComponent[com.ibm.ejs.container.StatelessBeanO,class com.ibm.ejs.container.StatelessBeanO,[EJBContainer],com.ibm.ejs.container.container,null]"
+  reentrant = false
+  allowRollbackOnly = false
+  discarded = false
+  ivNumberOfBeansLimited = false
+  POOLED = 3
+  IN_METHOD = 4
+  StateStrs = class java.lang.String[5]
+    StateStrs[0] = "DESTROYED"
+    StateStrs[1] = "PRE_CREATE"
+    StateStrs[2] = "CREATING"
+    StateStrs[3] = "POOLED"
+    StateStrs[4] = "IN_METHOD"
+  tc = class com.ibm.ejs.ras.TraceComponent@7d5183f6
+    strings[0] = "TraceComponent[com.ibm.ejs.container.SessionBeanO,class com.ibm.ejs.container.SessionBeanO,[EJBContainer],com.ibm.ejs.container.container,null]"
+  CLASS_NAME = "com.ibm.ejs.container.SessionBeanO"
+  DESTROYED = 0
+  PRE_CREATE = 1
+  CREATING = 2
+  messageContextMethod = null
+  sessionBean = null
+  currentIsolationLevel = 0
+  ivCallbackKind = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+    None = class com.ibm.ws.ejbcontainer.CallbackKind@3413c9fe
+      None = class com.ibm.ws.ejbcontainer.CallbackKind@3413c9fe
+      SessionBean = class com.ibm.ws.ejbcontainer.CallbackKind@3f6939c9
+      MessageDrivenBean = class com.ibm.ws.ejbcontainer.CallbackKind@3e1ca01e
+      InvocationContext = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+      $VALUES = class com.ibm.ws.ejbcontainer.CallbackKind[4]
+      name = "None"
+      ordinal = 0
+    SessionBean = class com.ibm.ws.ejbcontainer.CallbackKind@3f6939c9
+      None = class com.ibm.ws.ejbcontainer.CallbackKind@3413c9fe
+      SessionBean = class com.ibm.ws.ejbcontainer.CallbackKind@3f6939c9
+      MessageDrivenBean = class com.ibm.ws.ejbcontainer.CallbackKind@3e1ca01e
+      InvocationContext = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+      $VALUES = class com.ibm.ws.ejbcontainer.CallbackKind[4]
+      name = "SessionBean"
+      ordinal = 1
+    MessageDrivenBean = class com.ibm.ws.ejbcontainer.CallbackKind@3e1ca01e
+      None = class com.ibm.ws.ejbcontainer.CallbackKind@3413c9fe
+      SessionBean = class com.ibm.ws.ejbcontainer.CallbackKind@3f6939c9
+      MessageDrivenBean = class com.ibm.ws.ejbcontainer.CallbackKind@3e1ca01e
+      InvocationContext = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+      $VALUES = class com.ibm.ws.ejbcontainer.CallbackKind[4]
+      name = "MessageDrivenBean"
+      ordinal = 2
+    InvocationContext = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+    $VALUES = class com.ibm.ws.ejbcontainer.CallbackKind[4]
+      $VALUES[0] = class com.ibm.ws.ejbcontainer.CallbackKind@3413c9fe
+      $VALUES[1] = class com.ibm.ws.ejbcontainer.CallbackKind@3f6939c9
+      $VALUES[2] = class com.ibm.ws.ejbcontainer.CallbackKind@3e1ca01e
+      $VALUES[3] = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+    name = "InvocationContext"
+    ordinal = 3
+  CLASS_NAME = "com.ibm.ejs.container.ManagedBeanOBase"
+  tc = class com.ibm.ejs.ras.TraceComponent@38e213be
+    strings[0] = "TraceComponent[com.ibm.ejs.container.ManagedBeanOBase,class com.ibm.ejs.container.ManagedBeanOBase,[EJBContainer],com.ibm.ejs.container.container,null]"
+  ivEjbInstance = class ejb.EmployeeFacadeImpl@77fbe55a
+    entityManager = null
+  ivEjbManagedObjectContext = class com.ibm.ws.cdi.impl.managedobject.CDIManagedObjectState@5baa8282
+    serialVersionUID = 1
+    _cc = class org.jboss.weld.context.CreationalContextImpl@7c99bac
+      serialVersionUID = 7375854583908262422
+      SERIALIZATION_PROXY = class org.jboss.weld.context.CreationalContextImpl$SerializationProxy@75bd4f43
+      incompleteInstances = null
+      contextual = class org.jboss.weld.bean.SessionBean@152f6239
+      dependentInstances = class java.util.Collections$SynchronizedRandomAccessList@2f984831
+      parentDependentInstances = class java.util.Collections$SynchronizedRandomAccessList@73552f18
+      parentCreationalContext = null
+      resourceReferences = null
+      constructorInterceptionSuppressed = true
+      aroundConstructCallbacks = class java.util.LinkedList@3988636f
+      aroundConstructInterceptionContext = null
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7e70f8ed
+      strings[0] = "TraceComponent[com.ibm.ws.cdi.impl.managedobject.CDIManagedObjectState,class com.ibm.ws.cdi.impl.managedobject.CDIManagedObjectState,[JCDI],com.ibm.ws.cdi.impl.resources.CDI,null]"
+  ivManagedObject = class com.ibm.ws.cdi.impl.managedobject.CDIManagedObject@11c90db2
+    tc = class com.ibm.websphere.ras.TraceComponent@5e1d294
+      strings[0] = "TraceComponent[com.ibm.ws.cdi.impl.managedobject.CDIManagedObject,class com.ibm.ws.cdi.impl.managedobject.CDIManagedObject,[JCDI],com.ibm.ws.cdi.impl.resources.CDI,null]"
+    managedObject = class ejb.EmployeeFacadeImpl@77fbe55a
+    creationalContext = class org.jboss.weld.context.CreationalContextImpl@7c99bac
+    injectionTarget = class org.jboss.weld.injection.producer.ejb.SessionBeanInjectionTarget@79e13574
+      bean = class org.jboss.weld.bean.SessionBean@152f6239
+      bean = class org.jboss.weld.bean.SessionBean@152f6239
+      beanManager = class org.jboss.weld.manager.BeanManagerImpl@5d14be1e
+      type = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@4b855f97
+      injectionPoints = class java.util.Collections$UnmodifiableSet@183930cb
+      instantiator = class org.jboss.weld.injection.producer.DefaultInstantiator@7669b75f
+      injector = class org.jboss.weld.injection.producer.StatelessSessionBeanInjector@ef503c2
+      invoker = class org.jboss.weld.injection.producer.DefaultLifecycleCallbackInvoker@6f6d8c6c
+    lifecycleManaged = true
+    beanScope = "javax.enterprise.context.Dependent"
+    identity = "ejb.EmployeeFacadeImpl@77fbe55a"
+    serialVersionUID = -9126917678523682896
+  ivInterceptors = class java.lang.Object[2]
+    ivInterceptors[0] = class com.ibm.ws.cdi.ejb.impl.WeldSessionBeanInterceptorWrapper@580c3423
+      serialVersionUID = -4630548195644884051
+      tc = class com.ibm.websphere.ras.TraceComponent@5efe1a31
+      beanManagerImpl = null
+      ejbContext = class com.ibm.ejs.container.CMStatelessBeanO@6c2e88e7
+      serialVersionUID = 7327757031821596782
+      requestInitializedEvent = class org.jboss.weld.ejb.AbstractEJBRequestScopeActivationInterceptor$1@5349970a
+      requestDestroyedEvent = class org.jboss.weld.ejb.AbstractEJBRequestScopeActivationInterceptor$2@7253c3b9
+    ivInterceptors[1] = class com.ibm.ws.cdi.ejb.impl.EJBCDIInterceptorWrapper@3a33f6ac
+      tc = class com.ibm.websphere.ras.TraceComponent@1b938e8c
+      beanManager = class org.jboss.weld.bean.builtin.BeanManagerProxy@4dfaae84
+      activeInterceptors = class java.util.concurrent.ConcurrentHashMap@33b484d2
+      serialVersionUID = -5367087917382782149
+  CLASS_NAME = "com.ibm.ejs.container.BeanO"
+  tc = class com.ibm.ejs.ras.TraceComponent@4734cb2a
+    strings[0] = "TraceComponent[com.ibm.ejs.container.BeanO,class com.ibm.ejs.container.BeanO,[EJBContainer],com.ibm.ejs.container.container,null]"
+  isZOS = false
+  state = 1
+  container = class com.ibm.ejs.container.EJSContainer@70d6573
+  home = class com.ibm.ejs.container.SessionHome@13a05b47
+    serialVersionUID = -5599958674558718699
+    tc = class com.ibm.ejs.ras.TraceComponent@55fa46a0
+      strings[0] = "TraceComponent[com.ibm.ejs.container.EJSHome,class com.ibm.ejs.container.EJSHome,[EJBContainer],com.ibm.ejs.container.container,null]"
+    CLASS_NAME = "com.ibm.ejs.container.EJSHome"
+    ivCMDAccessor = class com.ibm.ws.threadContext.ComponentMetaDataAccessorImpl@7dcae90a
+      tc = class com.ibm.websphere.ras.TraceComponent@3dde28b4
+      cmdai = class com.ibm.ws.threadContext.ComponentMetaDataAccessorImpl@7dcae90a
+      threadContext = class com.ibm.ws.threadContext.ThreadContextImpl@1fc6d12d
+      defaultCMD = null
+    beanOFactory = class com.ibm.ejs.container.CMStatelessBeanOFactory@d4fa034
+      CLASS_NAME = "com.ibm.ejs.container.BeanOFactory"
+      tc = class com.ibm.ejs.ras.TraceComponent@7eb335c
+    container = class com.ibm.ejs.container.EJSContainer@70d6573
+    ivEntityHelper = null
+    noLocalCopies = false
+    allowPrimaryKeyMutation = false
+    noPrimaryKeyMutation = false
+    jndiName = null
+    j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@7a188e9e
+      serialVersionUID = 7488184044073147667
+      application = "curs_6_war_exploded"
+      module = "curs-6-1.0-SNAPSHOT"
+      component = "EmployeeFacadeImpl"
+      string = "curs_6_war_exploded#curs-6-1.0-SNAPSHOT#EmployeeFacadeImpl"
+      j2eeNameBytes = {99,117,114,115,95,54,95,119,97,114,95,101,120,112,108,111,100,101,100,35,99,117,114,115,45,54,45,49,46,48,45,83,78,65,80,83,72,79,84,35,69,109,112,108,111,121,101,101,70,97,99,97,100,101,73,109,112,108} /* array length = 58*/
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@1dbc0cb1
+    statelessSessionHome = true
+    statefulSessionHome = false
+    messageDrivenHome = false
+    ivSingletonSessionHome = false
+    hashValue = -1900481648
+    ivHomeId = class com.ibm.ejs.container.BeanId@78a729c9
+      tc = class com.ibm.ejs.ras.TraceComponent@32c65742
+      CLASS_NAME = "com.ibm.ejs.container.BeanId"
+      _isHome = true
+      pkey = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@7a188e9e
+      j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@66ec3609
+      byteArray = null
+      home = class com.ibm.ejs.container.HomeOfHomes@2e87cab9
+      activationStrategy = null
+      hashValue = -1362268379
+      ivFailoverKey = null
+      HOME_BEAN = 0
+      STATELESS_BEAN = 1
+      STATEFUL_BEAN = 2
+      ENTITY_BEAN = 3
+      MESSAGEDRIVEN_BEAN = 4
+      SINGLETON_BEAN = 5
+      USES_BEAN_MANAGED_TX = 16
+      MODULE_VERSION_CAPABLE = 32
+      TYPE_TO_TYPE_ID_MAP = {0,0,5,1,2,3,3,4} /* array length = 8*/
+      SERIALIZED_PKEY = 0
+      INTEGER_PKEY = 1
+      STRING_PKEY = 3
+      LONG_PKEY = 4
+      BYTE_ARRAY_PKEY = 8
+      BEAN_TYPE_LEN = 1
+      J2EE_NAME_LEN = 4
+      PKEY_TYPE_LEN = 1
+      header = {-84,-84,0,2,0,1} /* array length = 6*/
+      HEADER_LEN = 6
+      svBAOSs = class java.io.ByteArrayOutputStream[50]
+      svBAOSsSize = 1
+    ivHomeWrappers = null
+    ivStatelessId = class com.ibm.ejs.container.BeanId@493634a8
+    ivStatelessWrappers = class com.ibm.ejs.container.EJSWrapperCommon@520f1d6e
+      tc = class com.ibm.ejs.ras.TraceComponent@23f9bf97
+      CLASS_NAME = "com.ibm.ejs.container.EJSWrapperCommon"
+      isZOS = false
+      remoteWrapper = null
+      ivRemoteObjectWrapper = null
+      localWrapper = null
+      localObject = null
+      localWrapperProxyState = null
+      ivBusinessLocal = class java.lang.Object[1]
+      ivBusinessLocalProxies = class java.lang.Object[1]
+      ivBusinessLocalWrapperProxyStates = null
+      ivBusinessRemote = null
+      ivBusinessRemoteRegistered = null
+      isRemoteRegistered = false
+      ivCachedBeanO = null
+      ivBeanId = class com.ibm.ejs.container.BeanId@493634a8
+      ivBMD = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiBeanMetaData@1e49a5cb
+      svThreadContextAccessor = class com.ibm.ws.util.ThreadContextAccessor$ReflectionThreadContextAccessorImpl@128712da
+      svLocalBeanWrapperBaseFieldClassValue = class com.ibm.ws.ejbcontainer.util.FieldClassValueFactory$Impl$FieldClassValueImpl@a111080
+      svLocalBeanWrapperProxyStateFieldClassValue = class com.ibm.ws.ejbcontainer.util.FieldClassValueFactory$Impl$FieldClassValueImpl@1d149704
+      ivBucket = class com.ibm.ejs.util.cache.WrapperBucket@192720e
+      key = class com.ibm.ejs.container.util.ByteArray@6bcc07a2
+      object = class com.ibm.ejs.container.EJSWrapperCommon@520f1d6e
+      pinned = 0
+      accessedSweep = 0
+      ivEvictionIneligible = false
+    ivStatefulBusinessHomeWrapper = null
+    enterpriseBeanClass = class java.lang.Class@5d16670c
+      ANNOTATION = 8192
+      ENUM = 16384
+      SYNTHETIC = 4096
+      cachedConstructor = null
+      newInstanceCallerCache = null
+      name = "ejb.EmployeeFacadeImpl"
+      allPermDomain = class java.security.ProtectionDomain@68046784
+      useCaches = true
+      reflectionData = class java.lang.ref.SoftReference@3e835622
+      classRedefinedCount = 0
+      genericInfo = class sun.reflect.generics.repository.ClassRepository@5ebcde2
+      serialVersionUID = 3206093459760846163
+      serialPersistentFields = class java.io.ObjectStreamField[0]
+      reflectionFactory = class sun.reflect.ReflectionFactory@2326258e
+      initted = true
+      enumConstants = null
+      enumConstantDirectory = null
+      annotationData = class java.lang.Class$AnnotationData@202bd36a
+      annotationType = null
+      classValueMap = null
+    remoteEJBObjectClass = null
+    localEJBObjectClass = null
+    beanMetaData = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiBeanMetaData@1e49a5cb
+      tc = class com.ibm.websphere.ras.TraceComponent@1d173c56
+      beanRuntime = class com.ibm.ws.ejbcontainer.session.internal.SessionBeanRuntimeImpl@44018e9b
+      systemHomeBindingName = null
+      mbeanServiceReg = null
+      serialVersionUID = 4571786972187397809
+      tc = class com.ibm.ejs.ras.TraceComponent@6c201dae
+      svTimedObjectClass = class java.lang.Class@40a5bc95
+      svTimedObjectMethod = class java.lang.reflect.Method@74e5c433
+      ACCESS_INTENT_READ = 0
+      ACCESS_INTENT_UPDATE = 1
+      ACTIVATION_POLICY_ONCE = 0
+      ACTIVATION_POLICY_ACTIVITY_SESSION = 1
+      ACTIVATION_POLICY_TRANSACTION = 2
+      CONCURRENCY_CONTROL_PESSIMISTIC = 0
+      CONCURRENCY_CONTROL_OPTIMISTIC = 1
+      J2EE_EJB_VERSION_UNKNOWN = 0
+      J2EE_EJB_VERSION_1_0 = 10
+      J2EE_EJB_VERSION_1_1 = 11
+      J2EE_EJB_VERSION_2_0 = 20
+      J2EE_EJB_VERSION_2_1 = 21
+      J2EE_EJB_VERSION_3_0 = 30
+      J2EE_EJB_VERSION_3_1 = 31
+      J2EE_EJB_VERSION_3_2 = 32
+      JAVAEE_VERSION_5 = 50
+      LOAD_POLICY_ACTIVATION = 0
+      LOAD_POLICY_TRANSACTION = 1
+      LOAD_POLICY_INTERVAL = 2
+      LOAD_POLICY_DAILY = 3
+      LOAD_POLICY_WEEKLY = 4
+      LOCAL_TX_UNRESOLVED_ACTION_ROLLBACK = 0
+      LOCAL_TX_UNRESOLVED_ACTION_COMMIT = 1
+      METHOD_TYPE_UNSPECIFIED = 0
+      METHOD_TYPE_REMOTE = 1
+      METHOD_TYPE_REMOTE_HOME = 2
+      METHOD_TYPE_LOCAL = 3
+      METHOD_TYPE_LOCAL_HOME = 4
+      METHOD_TYPE_SERVICE_ENDPOINT = 5
+      PERSISTENCE_BEAN_MANAGED = 0
+      PERSISTENCE_CONTAINER_MANAGED = 1
+      PIN_POLICY_ACTIVATION_PERIOD = 0
+      PIN_POLICY_ACTIVITY_SESSION = 1
+      PIN_POLICY_TRANSACTION = 2
+      PIN_POLICY_BUSINESS_METHOD = 3
+      TX_ATTRIBUTE_TYPE_NOT_SUPPORTED = 0
+      TX_ATTRIBUTE_TYPE_SUPPORTS = 1
+      TX_ATTRIBUTE_TYPE_REQUIRED = 2
+      TX_ATTRIBUTE_TYPE_REQUIRES_NEW = 3
+      TX_ATTRIBUTE_TYPE_MANDATORY = 4
+      TX_ATTRIBUTE_TYPE_NEVER = 5
+      TX_ATTRIBUTE_TYPE_BEAN_MANAGED = 6
+      TX_BEAN_MANAGED = 0
+      TX_CONTAINER_MANAGED = 1
+      TX_ISOLATION_LEVEL_REPEATABLE_READ = 0
+      TX_ISOLATION_LEVEL_READ_COMMITTED = 1
+      TX_ISOLATION_LEVEL_READ_UNCOMMITTED = 2
+      TX_ISOLATION_LEVEL_SERIALIZABLE = 3
+      ivInitData = null
+      _javaNameSpaceContext = null
+      _moduleMetaData = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBModuleMetaDataImpl@6704df4e
+      _resourceRefList = class com.ibm.ws.resource.internal.ResourceRefConfigListImpl@3cd8e962
+      _localTran = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.LocalTranConfigDataImpl@3282e221
+      _globalTran = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.GlobalTranConfigDataImpl@760dbe67
+      j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@7a188e9e
+      ivUnversionedJ2eeName = null
+      type = 3
+      ivDependsOn = null
+      entityRemoteNoTxAttrMethods = class java.lang.String[4]
+      entityRemoteNoTxAttrMethodSignatures = class java.lang.String[4]
+      entityLocalNoTxAttrMethods = class java.lang.String[3]
+      entityLocalNoTxAttrMethodSignatures = class java.lang.String[3]
+      entityRemoteHomeNoTxAttrMethods = class java.lang.String[2]
+      entityRemoteHomeNoTxAttrMethodSignatures = class java.lang.String[2]
+      entityLocalHomeNoTxAttrMethods = class java.lang.String[1]
+      entityLocalHomeNoTxAttrMethodSignatures = class java.lang.String[1]
+      sessionLocalHomeNoTxAttrMethods = class java.lang.String[1]
+      sessionLocalHomeNoTxAttrMethodSignatures = class java.lang.String[1]
+      sessionRemoteHomeNoTxAttrMethods = class java.lang.String[1]
+      sessionRemoteHomeNoTxAttrMethodSignatures = class java.lang.String[1]
+      ivModuleVersion = 30
+      enterpriseBeanClassName = "ejb.EmployeeFacadeImpl"
+      enterpriseBeanClass = class java.lang.Class@5d16670c
+      enterpriseBeanAbstractClass = class java.lang.Class@5d16670c
+      homeBeanClass = class java.lang.Class@2a18edef
+      ivEnterpriseBeanFactory = class com.ibm.ws.cdi.impl.managedobject.CDIEJBManagedObjectFactoryImpl@7ef742ad
+      ivEnterpriseBeanClassConstructor = null
+      managedObjectManagesInjectionAndInterceptors = false
+      fullyInitialized = true
+      pKeyClass = null
+      m_syncToOSThreadValue = false
+      ivPersistenceRefNames = null
+      ivJpaPuIdSTUnsyncSet = null
+      ivExPcPuIds = class com.ibm.ws.jpa.JPAPuId[0]
+      homeInterfaceClassName = null
+      homeInterfaceClass = null
+      remoteInterfaceClass = null
+      remoteImplClass = null
+      remoteTieClass = null
+      homeRemoteImplClass = null
+      homeRemoteTieClass = null
+      localHomeInterfaceClassName = null
+      localHomeInterfaceClass = null
+      localInterfaceClass = null
+      localImplClass = null
+      localImplProxyConstructor = null
+      homeLocalImplClass = null
+      homeLocalImplProxyConstructor = null
+      ivHasWebServiceEndpoint = true
+      webserviceEndpointInterfaceClass = null
+      ivWebServiceEndpointProxyName = "ejb.WSEJBProxySLEmployeeFacadeImpl_3ee1a9f4"
+      ivWebServiceEndpointProxyClass = null
+      ivWebServiceEndpointCreated = false
+      ivBusinessLocalInterfaceClassNames = class java.lang.String[1]
+      ivBusinessLocalInterfaceClasses = class java.lang.Class[1]
+      ivBusinessRemoteInterfaceClassNames = null
+      ivBusinessRemoteInterfaceClasses = null
+      ivBusinessLocalImplClasses = class java.lang.Class[1]
+      ivBusinessLocalImplProxyConstructors = null
+      ivBusinessRemoteImplClasses = null
+      ivBusinessRemoteTieClasses = null
+      ivAggregateLocalImplClass = null
+      ivLocalBean = false
+      ivLocalBeanWrapperField = null
+      ivMessageEndpointBaseField = null
+      ivManagedBeanBeanOField = null
+      ivIndirectLocalProxies = false
+      cmpResetFields = null
+      connFactoryName = null
+      envProps = class java.util.Properties@2231591b
+      simpleJndiBindingName = null
+      localHomeJndiBindingName = null
+      remoteHomeJndiBindingName = null
+      ivRemoteHomeJndiName = null
+      ivLocalHomeJndiName = null
+      businessInterfaceJndiBindingNames = null
+      enterpriseBeanName = "EmployeeFacadeImpl"
+      reentrant = false
+      passivationCapable = true
+      sessionTimeout = 0
+      ivSFSBFailover = false
+      ivSfFailoverClient = null
+      sessionActivateTran = false
+      sessionActivateSession = false
+      optionACommitOption = false
+      optionBCommitOption = false
+      optionCCommitOption = false
+      ivReadOnlyCommitOption = false
+      entitySessionalTranOption = false
+      optimisticConcurrencyControl = false
+      CACHE_RELOAD_NONE = 0
+      CACHE_RELOAD_INTERVAL = 1
+      CACHE_RELOAD_DAILY = 2
+      CACHE_RELOAD_WEEKLY = 3
+      ivCacheReloadType = 0
+      ivCacheReloadInterval = -1
+      activationPolicy = 0
+      methodNames = null
+      localMethodNames = class java.lang.String[1]
+      timedMethodNames = null
+      wsEndpointMethodNames = class java.lang.String[10]
+      lifecycleInterceptorMethodNames = null
+      methodInfos = null
+      localMethodInfos = class com.ibm.ejs.container.EJBMethodInfoImpl[1]
+      timedMethodInfos = null
+      wsEndpointMethodInfos = class com.ibm.ejs.container.EJBMethodInfoImpl[10]
+      lifecycleInterceptorMethodInfos = null
+      isolationAttrs = null
+      readOnlyAttrs = null
+      homeMethodNames = null
+      localHomeMethodNames = null
+      homeMethodInfos = null
+      localHomeMethodInfos = null
+      homeIsolationAttrs = null
+      homeReadOnlyAttrs = null
+      commitDanglingWork = false
+      ivHasInheritance = false
+      ivHasAppManagedPersistenceContext = false
+      ivHasCMExtendedPersistenceContext = false
+      usesBeanManagedTx = false
+      usesBeanManagedAS = false
+      cmpVersion = 0
+      persister = null
+      classLoader = class com.ibm.ws.classloading.internal.AppClassLoader@4e492a98
+      ivContextClassLoader = class com.ibm.ws.classloading.internal.ThreadContextClassLoader@7ca9bce4
+      minPoolSize = 50
+      maxPoolSize = 500
+      allowCachedTimerDataForMethods = 0
+      ivInitialPoolSize = 0
+      ivMaxCreation = 0
+      ivMaxCreationTimeout = 300000
+      isPreFindFlushEnabled = true
+      isCleanEJBStoreEnabled = true
+      fbpkReadOnlyOverrideAllBeans = false
+      allowCustomFinderSQLForUpdateALLBeans = false
+      allowCustomFinderSQLForUpdateThisBean = false
+      allowCustomFinderSQLForUpdateMethodLevel = false
+      allowWAS390CustomFinderAtBeanLevel = false
+      CF_METHOD_NAME_OFFSET = 0
+      CF_METHOD_SIG_OFFSET = 1
+      isTimedObject = false
+      ivTimeoutMethod = null
+      isLightweight = false
+      ivActivationSpecJndiName = null
+      ivActivationSpecAuthAlias = null
+      ivMessageDestinationJndiName = null
+      ivMessageListenerPortName = null
+      ivMessagingTypeClassName = null
+      ivApplicationVersionId = 50
+      ivActivationConfig = null
+      ivDeferEJBInitialization = true
+      ivCluster = null
+      ivBeanInjectionTargets = class com.ibm.wsspi.injectionengine.InjectionTarget[1]
+      ivJavaColonCompEnvMap = class java.util.LinkedHashMap@3e8086b8
+      wccm = null
+      ivComponent_Id = null
+      removeTxAttr = 0
+      container = class com.ibm.ejs.container.EJSContainer@70d6573
+      homeRecord = class com.ibm.ws.ejbcontainer.osgi.internal.HomeRecordImpl@5aa07a85
+      accessIntentList = null
+      isoLevelList = null
+      ivCallbackKind = class com.ibm.ws.ejbcontainer.CallbackKind@7fbdc04
+      ivInterceptorMetaData = class com.ibm.ejs.container.interceptors.InterceptorMetaData@65564981
+      ivInitMethodMap = null
+      ivRoleLinkMap = null
+      metadataComplete = false
+      ivUseCallerIdentity = false
+      ivRunAs = null
+      ivEjbCreateMethod = null
+      ivMetaDataDestroyRequired = true
+      supportsFluffOnFind = false
+      ivSingletonUsesBeanManagedConcurrency = false
+      ivHasAsynchMethod = false
+      ivAfterBegin = null
+      ivBeforeCompletion = null
+      ivAfterCompletion = null
+      methodsExposedOnLocalInterface = null
+      methodsExposedOnRemoteInterface = null
+      methodsExposedOnLocalHomeInterface = null
+      methodsExposedOnRemoteHomeInterface = null
+      allPublicMethodsOnBean = null
+      methodsToMethodInfos = null
+      ivReferenceContext = class com.ibm.ws.injectionengine.osgi.internal.OSGiReferenceContextImpl@4ff505b5
+      ivPassivatorFields = null
+      ivIsNoMethodInterfaceMDB = false
+      tc = class com.ibm.websphere.ras.TraceComponent@51ff69d4
+      NUM_STATIC_SLOTS = 4
+      ID_UNINITIALIZED = -1
+      id = 3
+      metaDataInterface = class java.lang.Class@2f2927c4
+      staticSlots = class java.lang.Object[4]
+      dynamicSlots = null
+    ejbMetaData = null
+    environment = class java.util.Properties@2231591b
+      serialVersionUID = 4112578634029874840
+      defaults = null
+      hexDigit = {0123456789ABCDEF} /* array length = 16*/
+      table = class java.util.Hashtable$Entry[11]
+      count = 0
+      threshold = 8
+      loadFactor = 0.75
+      modCount = 0
+      serialVersionUID = 1421746759512286392
+      MAX_ARRAY_SIZE = 2147483639
+      keySet = null
+      entrySet = null
+      values = null
+      KEYS = 0
+      VALUES = 1
+      ENTRIES = 2
+    activationStrategy = class com.ibm.ejs.container.activator.UncachedActivationStrategy@1ce34fbd
+      tc = class com.ibm.ejs.ras.TraceComponent@600b5a86
+      CLASS_NAME = "com.ibm.ejs.container.activator.UncachedActivationStrategy"
+      cache = class com.ibm.ejs.util.cache.Cache@43db30b
+      locks = class com.ibm.ejs.container.util.locking.LockTable@5f62fab3
+      tc = class com.ibm.ejs.ras.TraceComponent@2af11a91
+      CLASS_NAME = "com.ibm.ejs.container.activator.ActivationStrategy"
+    pmiBean = null
+    persister = null
+    lockStrategy = class com.ibm.ejs.container.lock.LockStrategy@5d4bd489
+      EXCLUSIVE_LOCK_STRATEGY = class com.ibm.ejs.container.lock.ExclusiveLockStrategy@78edcd56
+      NULL_LOCK_STRATEGY = class com.ibm.ejs.container.lock.LockStrategy@5d4bd489
+    wrapperManager = class com.ibm.ejs.container.WrapperManager@77854623
+      tc = class com.ibm.ejs.ras.TraceComponent@7931c25d
+      CLASS_NAME = "com.ibm.ejs.container.WrapperManager"
+      wrapperCache = class com.ibm.ejs.util.cache.Cache@26d0f44a
+      container = class com.ibm.ejs.container.EJSContainer@70d6573
+      beanIdCache = class com.ibm.ejs.container.BeanIdCache@4b64f961
+    enabled = true
+    beanPool = class com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe@152636db
+    ivNumberBeansCreated = 0
+    BEAN_POOL_WAIT_INTERVAL = 10000
+    ivAIServiceEnabled = false
+    defaultAIMethodInfo = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBMethodMetaDataImpl@59cc12a9
+      runAs = null
+      useCallerPrincipal = false
+      useSystemPrincipal = false
+      serialVersionUID = 6211349835382155010
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@37eecece
+      tc = class com.ibm.ejs.ras.TraceComponent@3cca5c04
+      methodSignature = "__defaultAIMethodInfo__"
+      jdiMethodSignature = "- NO JDI SIGNATURE AVAILABLE - "
+      txAttr = class com.ibm.websphere.csi.TransactionAttribute@2ba9a124
+      asAttr = class com.ibm.websphere.csi.ActivitySessionAttribute@29be21c1
+      ivInterface = class com.ibm.websphere.csi.MethodInterface@102b2f45
+      methodName = "__defaultAIMethodInfo__NameOnly"
+      isHome = false
+      isStatefulSessionBean = false
+      bmd = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiBeanMetaData@1e49a5cb
+      isStatelessSessionBean = true
+      isSingletonSessionBean = false
+      isHomeCreate = false
+      isComponentRemove = false
+      isolationAttr = 0
+      readOnlyAttr = false
+      isaCMP11CustomFinderWithForUpdateAI = false
+      isaCMP11FBPK = false
+      isLocal = false
+      setClassLoader = false
+      isCMRSetMethod = false
+      isLightweight = false
+      isLightweightTxCapable = false
+      ivJPATaskName = null
+      ivAroundInterceptors = null
+      ivMethod = null
+      ivNumberOfMethodParms = 0
+      ivBridgeMethod = null
+      ivSFSBRemove = false
+      ivRetainIfException = false
+      ivAccessTimeout = -1
+      ivLockType = null
+      ivAsynchMethod = false
+      ivDeclaredExceptions = null
+      ivDeclaredExceptionsComp = null
+      ivDenyAll = false
+      ivPermitAll = false
+      ivRolesAllowed = null
+      tc = class com.ibm.websphere.ras.TraceComponent@51ff69d4
+      NUM_STATIC_SLOTS = 4
+      ID_UNINITIALIZED = -1
+      id = -1
+      metaDataInterface = class java.lang.Class@36a818a0
+      staticSlots = class java.lang.Object[4]
+      dynamicSlots = null
+    CachedAI_NotInitialize = 0
+    CachedAI_HasMethodLevelAI = 1
+    CachedAI_HasNoMethodLevelAI = -1
+    cachedHasMethodLevelAI = 0
+    ivCachedBeanLevelAccessIntent = null
+    cvUsePortableClass = true
+    ivAllowEarlyInsert = false
+    homeRecord = class com.ibm.ws.ejbcontainer.osgi.internal.HomeRecordImpl@5aa07a85
+      systemHomeBindingName = null
+      remoteBindingData = null
+      serialVersionUID = -7648623497327828699
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@67717fb9
+      beanO = class com.ibm.ejs.container.CMStatelessBeanO@750dd809
+      homeInternal = class com.ibm.ejs.container.SessionHome@13a05b47
+      bmd = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiBeanMetaData@1e49a5cb
+      ejbMmd = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBModuleMetaDataImpl@6704df4e
+      homeOfHomes = class com.ibm.ejs.container.HomeOfHomes@2e87cab9
+      j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@7a188e9e
+      cmpVersion = 0
+      connFactoryName = null
+      ejbName = "EmployeeFacadeImpl"
+      classLoader = class com.ibm.ws.classloading.internal.AppClassLoader@4e492a98
+      beanType = 3
+      ivRemoteBindingsHelper = null
+      ivLocalBindingsHelper = null
+      ivJavaGlobalBindings = class java.util.ArrayList@2293bb3b
+      ivJavaAppBindings = class java.util.ArrayList@32d835f1
+      childBeans = class java.util.Hashtable@298e6e33
+      ivHasInheritance = false
+      ivIsChild = false
+      ivShortDefaultBindingsEnabled = null
+    ivSingletonBeanO = null
+    ivCreatingSingletonBeanO = false
+    ivSingletonBeanOCreateFailed = false
+    ivApplicationStarted = true
+  pmiBean = null
+  beanId = class com.ibm.ejs.container.BeanId@493634a8
+    tc = class com.ibm.ejs.ras.TraceComponent@32c65742
+      strings[0] = "TraceComponent[com.ibm.ejs.container.BeanId,class com.ibm.ejs.container.BeanId,[EJBContainer],com.ibm.ejs.container.container,null]"
+    CLASS_NAME = "com.ibm.ejs.container.BeanId"
+    _isHome = false
+    pkey = null
+    j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@7a188e9e
+    byteArray = class com.ibm.ejs.container.util.ByteArray@6bcc07a2
+      beanId = class com.ibm.ejs.container.BeanId@493634a8
+      CLASS_NAME = "com.ibm.ejs.container.util.ByteArray"
+      data = {-84,-84,0,2,0,1,1,58,0,0,0,99,117,114,115,95,54,95,119,97,114,95,101,120,112,108,111,100,101,100,35,99,117,114,115,45,54,45,49,46,48,45,83,78,65,80,83,72,79,84,35,69,109,112,108,111,121,101,101,70,97,99,97,100,101,73,109,112,108} /* array length = 69*/
+      hashcode = 3392954879998004970
+      hashcode32 = 847026485
+      HEX_CHARS = {0123456789abcdef} /* array length = 16*/
+      initial_hash = -2223765811167872118
+      mix_master = {4933139351476610159,5005341462544428057,-1453159914355205806,8281325462521708801,4607748714844293732,-3764111934339875086,8320409100192189548,8420247983362759768,-7597847052445934233,-3173910141822783079,-7688989699042292238,3429396389939155751,-5062430034552481777,-5823362867119656213,-8801844128422882523,-5052715516771863111,-870733797230659614,-362319592869525219,4788732200433335801,4548830613927191315,7544806401538812819,7586374831082653871,-1239807311421564983,-1025074758523306758,-6461364975704083531,4980358060886603154,4930714604177104463,2056556441885503234,6415600006540841207,5752606625249102471,-6901047628927138211,4380804002232388461,2136177531279569616,-349124148475530926,5812918152301571081,2653996859211630983,-8964669850071968930,-4437664257013106290,-4451793919529815848,-6106447162657623665,-2784513668583920662,-8414094705339005679,-2207660270505147217,6507182462343745303,3998020595653193692,-4905660070025874796,8975096142356144569,-5041136955134566960,6326461847893020390,-8334182183764239684,8556220744479549098,5952375207892112881,-7978188702101473111,3429112276528980994,-1988898937000646866,2486915316353720383,2757556857947252991,-8035426787455266998,-5909132100679174360,-6318099829270576077,3275413890805227550,8566783651680167794,-8052141503744051402,6010845682144071745,-8304400873715963628,-5908078436425678820,2008553160573808559,-2819166021021999412,5382424027072043613,4009717960598662055,1847990988848319135,1553736051808583315,859749159554435887,7617586268418296496,1137154929561829007,5852822296314685177,-4508192713666290713,-5301006392906118754,1288351301968457687,-8732661820775296997,3743401301997395901,-2419474111827280115,7681208082025123430,3296754401383622098,-7619743871140571789,-5444468319237031174,-1826393263972127734,7226290837104890605,-5114545287089190416,-864060354928875654,-8684023854450108313,-5194241922878987455,-4591192147793544772,1234006919577364415,-3936336625490884591,-6593724713396498301,2779431284120425192,6701924018397514024,-8377286492131653356,-3036688545137929654,3532479440175035477,-2486020288450892679,2250253404502830513,-2809438569251519750,4756054313855198704,1049792658466837024,6008045257375748577,-6694551306109829524,1436162486427990919,1953260999445835298,-9096306926072925342,-4447170959021479724,2281765276900129197,7018045439268088125,3530326859556441572,8928500367007969872,-7548504910768415306,8491174918848727063,2725427544642412950,-1846557650567198975,7692844570254237316,-2329275471928509258,-6598670108873750485,7286879004720242648,1262623724617059856,-244363932095942076,724052077250196479,7172078234317036693,6811892593491539548,-1152819477767237299,5138119163643488320,3665390357066136642,3191793013164901058,-3685846739734149158,3982065459219965474,4822562617140336199,-7365836214641480259,3271367842686489154,8724038983453203841,-5457652260866279808,-7732217390738789556,6693059324359418400,-1682134157496827727,2418769104580471956,8879551251272072751,-4997356740189703104,-9071099120143888272,-680892989853392074,1739587042988643069,3373404624189000959,5680319921195915068,-200507342791498747,-9024929211895825182,-5932255459591969881,6490413647370805508,-1547832658927226783,5735044581415517929,-7479951246403808438,5523990179621710356,218706823903385161,7226912064490112629,-6484667915835023296,3807960521479491588,-6480648837128221188,-4423332479301058453,-4129662350876414705,-3595141808378884930,-418947722213327333,-2844517618114579613,232829063699966274,8466137507511586716,-1118264937587278139,1543018742721807459,-417715424100470517,7978015287561484139,1544841464337700354,2730772503959541077,6769471625959199573,2547724611065914717,-1940936672524046959,5025251617293336350,7320004681537167149,-3912074961302627416,7320690559666328252,5383105008300071328,-174245335696147700,-3487002892556502424,-7875405188139200998,-4846224533375351692,-8233369710693908789,-2513185776770054861,7044164889131634069,-989536329366695740,-2653183515149969267,-6050910942263229355,-6767225479892761414,-8730286237691595927,-7012453055387909991,1133255728415756315,6499423626313885142,-8300437812355002225,9084539283118027484,-6585717722744514702,4401193149167703339,-6984141159414974299,6813307151674075053,-3736939605366610537,2230231106005033322,7182850806518785871,6609805295487548421,-6053556321550009287,-7101717864338141727,-2748614509684029005,-2214104135226745859,1458022522121146992,-6277575509698422280,-3752164500142762032,-7386173236844847452,72421085476613114,8124536607956790703,-543955773244899281,-8431654451114250658,1016600102774762451,5528967934420998822,-3124619278526463133,-2661902829300881246,4614101272245083638,7665806731349260979,-502154115469221375,-2229763030801674433,-5656627420725844516,7754751075884126842,-8397886589148919922,178266931321858041,-3426667875362162740,-894029959067713205,424720112276865871,3940003122762310991,6952877505786372216,-5316198582568905216,-3412595509278337916,4377191117302511558,5078204108498312433,-5686359500817622618,-5011364611249461122,-5411888686611253299,-3917988986397697302,3323582688409225420,-709625314233156680,4388451852439127499,5109473580125722386,-8350301363804656390,8883392537907563280,2983318135082155233,-4968080463103317282,959966860625488182} /* array length = 256*/
+    home = class com.ibm.ejs.container.SessionHome@13a05b47
+    activationStrategy = class com.ibm.ejs.container.activator.UncachedActivationStrategy@1ce34fbd
+    hashValue = -1900481648
+    ivFailoverKey = null
+    HOME_BEAN = 0
+    STATELESS_BEAN = 1
+    STATEFUL_BEAN = 2
+    ENTITY_BEAN = 3
+    MESSAGEDRIVEN_BEAN = 4
+    SINGLETON_BEAN = 5
+    USES_BEAN_MANAGED_TX = 16
+    MODULE_VERSION_CAPABLE = 32
+    TYPE_TO_TYPE_ID_MAP = {0,0,5,1,2,3,3,4} /* array length = 8*/
+    SERIALIZED_PKEY = 0
+    INTEGER_PKEY = 1
+    STRING_PKEY = 3
+    LONG_PKEY = 4
+    BYTE_ARRAY_PKEY = 8
+    BEAN_TYPE_LEN = 1
+    J2EE_NAME_LEN = 4
+    PKEY_TYPE_LEN = 1
+    header = {-84,-84,0,2,0,1} /* array length = 6*/
+    HEADER_LEN = 6
+    svBAOSs = class java.io.ByteArrayOutputStream[50]
+      svBAOSs[0] = class java.io.ByteArrayOutputStream@426231b5
+      svBAOSs[1] = null
+      svBAOSs[2] = null
+      svBAOSs[3] = null
+      svBAOSs[4] = null
+      svBAOSs[5] = null
+      svBAOSs[6] = null
+      svBAOSs[7] = null
+      svBAOSs[8] = null
+      svBAOSs[9] = null
+      svBAOSs[10] = null
+      svBAOSs[11] = null
+      svBAOSs[12] = null
+      svBAOSs[13] = null
+      svBAOSs[14] = null
+      svBAOSs[15] = null
+      svBAOSs[16] = null
+      svBAOSs[17] = null
+      svBAOSs[18] = null
+      svBAOSs[19] = null
+      svBAOSs[20] = null
+      svBAOSs[21] = null
+      svBAOSs[22] = null
+      svBAOSs[23] = null
+      svBAOSs[24] = null
+      svBAOSs[25] = null
+      svBAOSs[26] = null
+      svBAOSs[27] = null
+      svBAOSs[28] = null
+      svBAOSs[29] = null
+      svBAOSs[30] = null
+      svBAOSs[31] = null
+      svBAOSs[32] = null
+      svBAOSs[33] = null
+      svBAOSs[34] = null
+      svBAOSs[35] = null
+      svBAOSs[36] = null
+      svBAOSs[37] = null
+      svBAOSs[38] = null
+      svBAOSs[39] = null
+      svBAOSs[40] = null
+      svBAOSs[41] = null
+      svBAOSs[42] = null
+      svBAOSs[43] = null
+      svBAOSs[44] = null
+      svBAOSs[45] = null
+      svBAOSs[46] = null
+      svBAOSs[47] = null
+      svBAOSs[48] = null
+      svBAOSs[49] = null
+    svBAOSsSize = 1
+  beanPool = class com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe@152636db
+    CLASS_NAME = "com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe"
+    tc = class com.ibm.ejs.ras.TraceComponent@6c5aa37
+      strings[0] = "TraceComponent[com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe,class com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe,[EJBContainer],null,null]"
+    DrainAggressivenessPercentage = 20
+    DISABLED_SIZE = class com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe$SizeData@400139bb
+      minSize = 0
+      maxSize = 0
+      maxDrainAmount = 0
+    poolSize = class com.ibm.ws.ejbcontainer.util.PoolImplThreadSafe$SizeData@192c076c
+      minSize = 50
+      maxSize = 500
+      maxDrainAmount = 90
+    buffer = class com.ibm.ws.util.LockFreeIndexedStack@52f3fb1e
+      top = class java.util.concurrent.atomic.AtomicReference@11560daf
+    discardStrategy = class com.ibm.ejs.container.SessionHome@13a05b47
+    ivInactiveNoDrainCount = 0
+    ivManaged = false
+    beanPerf = null
+    inactive = true
+    poolMgr = class com.ibm.ws.ejbcontainer.util.PoolManagerImpl@22c92ea1
+      CLASS_NAME = "com.ibm.ws.ejbcontainer.util.PoolManagerImpl"
+      tc = class com.ibm.ejs.ras.TraceComponent@365b10bc
+      pools = class java.util.ArrayList@119322fa
+      poolArray = class com.ibm.ws.ejbcontainer.util.PoolImplBase[10]
+      drainInterval = 30000
+      ivScheduledFuture = null
+      ivScheduledExecutorService = class com.ibm.ws.threading.internal.ScheduledExecutorImpl@266a24e8
+      ivIsCanceled = false
+      ivIsRunning = false
+  connectionHandleList = null
+  ivContainerTx = null
+  ivActivationStrategy = null
+  ivCacheKey = null
+

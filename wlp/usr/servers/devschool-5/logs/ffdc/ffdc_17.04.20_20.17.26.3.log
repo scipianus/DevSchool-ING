@@ -1,0 +1,128 @@
+------Start of DE processing------ = [4/20/17 20:17:26:785 EEST]
+Exception = javax.ejb.EJBException
+Source = com.ibm.ejs.container.BusinessExceptionMappingStrategy.setUncheckedException
+probeid = 506
+Stack Dump = javax.ejb.EJBException: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/ejb.EmployeeFacadeImpl/entityManager reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.; nested exception is: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at com.ibm.ejs.container.util.ExceptionUtil.EJBException(ExceptionUtil.java:461)
+	at com.ibm.ejs.container.ManagedBeanOBase.injectInstance(ManagedBeanOBase.java:154)
+	at com.ibm.ejs.container.StatelessBeanO.injectInstance(StatelessBeanO.java:295)
+	at com.ibm.ejs.container.StatelessBeanO.initialize(StatelessBeanO.java:169)
+	at com.ibm.ejs.container.BeanOFactory.create(BeanOFactory.java:105)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:976)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:1078)
+	at com.ibm.ejs.container.activator.UncachedActivationStrategy.atActivate(UncachedActivationStrategy.java:63)
+	at com.ibm.ejs.container.activator.Activator.preInvokeActivateBean(Activator.java:264)
+	at com.ibm.ejs.container.EJSContainer.preInvokeActivate(EJSContainer.java:3239)
+	at com.ibm.ejs.container.EJSContainer.EjbPreInvoke(EJSContainer.java:2576)
+	at ejb.EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.getEmployees(EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.java)
+	at jsf.model.employee.EmployeeBean.getEmployees(EmployeeBean.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:98)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:66)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:167)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:184)
+	at org.jboss.weld.el.WeldValueExpression.getValue(WeldValueExpression.java:50)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:96)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:360)
+	at javax.faces.component.UIData.getValue(UIData.java:2145)
+	at javax.faces.component.UIData.createDataModel(UIData.java:2089)
+	at javax.faces.component.UIData.getDataModel(UIData.java:2052)
+	at javax.faces.component.UIData.getRowCount(UIData.java:488)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeInnerHtml(HtmlTableRendererBase.java:359)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeChildren(HtmlTableRendererBase.java:208)
+	at javax.faces.component.UIComponentBase.encodeChildren(UIComponentBase.java:643)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:541)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.renderView(FaceletViewDeclarationLanguage.java:1891)
+	at org.apache.myfaces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:313)
+	at javax.faces.application.ViewHandlerWrapper.renderView(ViewHandlerWrapper.java:58)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:116)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:267)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:200)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1290)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1157)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4956)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:525)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:315)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1014)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:280)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:967)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:359)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:318)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:471)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:405)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:285)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:256)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2068)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2059)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:334)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:305)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:1005)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerFactory(JPAPUnitInfo.java:924)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerPool(JPAPUnitInfo.java:1090)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.<init>(JPATxEntityManager.java:149)
+	at com.ibm.ws.jpa.container.v21.JPATxEntityManagerV21.<init>(JPATxEntityManagerV21.java:47)
+	at com.ibm.ws.jpa.container.v21.internal.JPA21Runtime.createJPATxEntityManager(JPA21Runtime.java:72)
+	at com.ibm.ws.jpa.management.AbstractJPAComponent.getEntityManager(AbstractJPAComponent.java:254)
+	at com.ibm.ws.jpa.container.osgi.jndi.JPAJndiLookupObjectFactory.getObjectInstance(JPAJndiLookupObjectFactory.java:178)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1556)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1433)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1373)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:108)
+	at com.ibm.ws.injectionengine.AbstractInjectionEngine.inject(AbstractInjectionEngine.java:852)
+	at com.ibm.ejs.container.ManagedBeanOBase.injectInstance(ManagedBeanOBase.java:148)
+	... 64 more
+Caused by: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:231)
+	... 82 more
+Caused by: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:445)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.lookupJtaDataSource(JPAPUnitInfo.java:513)
+	at com.ibm.ws.jpa.management.JPACompPUnitInfo.getJtaDataSource(JPACompPUnitInfo.java:156)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1865)
+	... 80 more
+Caused by: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS
+	at com.ibm.ws.jndi.internal.ContextNode.getTargetNode(ContextNode.java:126)
+	at com.ibm.ws.jndi.internal.ContextNode.lookup(ContextNode.java:212)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:299)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:62)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:161)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:318)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:424)
+	... 83 more
+
+Dump of callerThis
+Object type = com.ibm.ejs.container.BusinessExceptionMappingStrategy
+  CLASS_NAME = "com.ibm.ejs.container.BusinessExceptionMappingStrategy"
+  tc = class com.ibm.ejs.ras.TraceComponent@551c3885
+    strings[0] = "TraceComponent[com.ibm.ejs.container.BusinessExceptionMappingStrategy,class com.ibm.ejs.container.BusinessExceptionMappingStrategy,[EJBContainer],com.ibm.ejs.container.container,null]"
+  INSTANCE = class com.ibm.ejs.container.BusinessExceptionMappingStrategy@1f036059
+  tc = class com.ibm.ejs.ras.TraceComponent@54b7fa2d
+    strings[0] = "TraceComponent[com.ibm.ejs.container.ExceptionMappingStrategy,class com.ibm.ejs.container.ExceptionMappingStrategy,[EJBContainer],com.ibm.ejs.container.container,null]"
+

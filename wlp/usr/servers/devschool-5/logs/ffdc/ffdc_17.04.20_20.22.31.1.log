@@ -1,0 +1,178 @@
+------Start of DE processing------ = [4/20/17 20:22:31:338 EEST]
+Exception = javax.persistence.PersistenceException
+Source = com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject
+probeid = 408
+Stack Dump = javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2068)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2059)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:334)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:305)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:1005)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerFactory(JPAPUnitInfo.java:924)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerPool(JPAPUnitInfo.java:1090)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.<init>(JPATxEntityManager.java:149)
+	at com.ibm.ws.jpa.container.v21.JPATxEntityManagerV21.<init>(JPATxEntityManagerV21.java:47)
+	at com.ibm.ws.jpa.container.v21.internal.JPA21Runtime.createJPATxEntityManager(JPA21Runtime.java:72)
+	at com.ibm.ws.jpa.management.AbstractJPAComponent.getEntityManager(AbstractJPAComponent.java:254)
+	at com.ibm.ws.jpa.container.osgi.jndi.JPAJndiLookupObjectFactory.getObjectInstance(JPAJndiLookupObjectFactory.java:178)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1556)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1433)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1373)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:108)
+	at com.ibm.ws.injectionengine.AbstractInjectionEngine.inject(AbstractInjectionEngine.java:852)
+	at com.ibm.ejs.container.ManagedBeanOBase.injectInstance(ManagedBeanOBase.java:148)
+	at com.ibm.ejs.container.StatelessBeanO.injectInstance(StatelessBeanO.java:295)
+	at com.ibm.ejs.container.StatelessBeanO.initialize(StatelessBeanO.java:169)
+	at com.ibm.ejs.container.BeanOFactory.create(BeanOFactory.java:105)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:976)
+	at com.ibm.ejs.container.EJSHome.createBeanO(EJSHome.java:1078)
+	at com.ibm.ejs.container.activator.UncachedActivationStrategy.atActivate(UncachedActivationStrategy.java:63)
+	at com.ibm.ejs.container.activator.Activator.preInvokeActivateBean(Activator.java:264)
+	at com.ibm.ejs.container.EJSContainer.preInvokeActivate(EJSContainer.java:3239)
+	at com.ibm.ejs.container.EJSContainer.EjbPreInvoke(EJSContainer.java:2576)
+	at ejb.EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.getEmployees(EJSLocal0SLEmployeeFacadeImpl_3ee1a9f4.java)
+	at jsf.model.employee.EmployeeBean.getEmployees(EmployeeBean.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:98)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:66)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:167)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:184)
+	at org.jboss.weld.el.WeldValueExpression.getValue(WeldValueExpression.java:50)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:96)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:360)
+	at javax.faces.component.UIData.getValue(UIData.java:2145)
+	at javax.faces.component.UIData.createDataModel(UIData.java:2089)
+	at javax.faces.component.UIData.getDataModel(UIData.java:2052)
+	at javax.faces.component.UIData.getRowCount(UIData.java:488)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeInnerHtml(HtmlTableRendererBase.java:359)
+	at org.apache.myfaces.shared.renderkit.html.HtmlTableRendererBase.encodeChildren(HtmlTableRendererBase.java:208)
+	at javax.faces.component.UIComponentBase.encodeChildren(UIComponentBase.java:643)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:541)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:550)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.renderView(FaceletViewDeclarationLanguage.java:1891)
+	at org.apache.myfaces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:313)
+	at javax.faces.application.ViewHandlerWrapper.renderView(ViewHandlerWrapper.java:58)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:116)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:267)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:200)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1290)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:778)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:475)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1157)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4956)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.handleRequest(WebApp31.java:525)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:315)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1014)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:280)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:967)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:359)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:318)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:471)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:405)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:285)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:256)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:929)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1018)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.6.3.WAS-v20170206-e2ea1d5): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [helloWorldDS] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:231)
+	... 82 more
+Caused by: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/helloWorldDS data source for the helloWorldDS persistence unit because it has encountered the following exception: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS.
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:445)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.lookupJtaDataSource(JPAPUnitInfo.java:513)
+	at com.ibm.ws.jpa.management.JPACompPUnitInfo.getJtaDataSource(JPACompPUnitInfo.java:156)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1865)
+	... 80 more
+Caused by: javax.naming.NameNotFoundException: Intermediate context does not exist: jdbc/helloWorldDS
+	at com.ibm.ws.jndi.internal.ContextNode.getTargetNode(ContextNode.java:126)
+	at com.ibm.ws.jndi.internal.ContextNode.lookup(ContextNode.java:212)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:299)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:62)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:161)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:318)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:424)
+	... 83 more
+
+Dump of callerThis
+Object type = com.ibm.ws.jpa.management.JPAPCtxtInjectionBinding
+
+==> Performing default dump from com.ibm.ws.injectionengine.ffdc.InjectionDiagnosticModule  = Thu Apr 20 20:22:31 EEST 2017
+ = *** Start InjectionDiagnosticModule Dump ***
+ = 
+ = *** Start InjectionEngine Dump    ---> com.ibm.ws.injectionengine.osgi.internal.OSGiInjectionEngineImpl@54a16258
+ = 
+ =    Default Factories : 
+ =       Indirect    = com.ibm.ws.injectionengine.osgi.internal.IndirectJndiLookupReferenceFactoryImpl@6d27d3ab
+ =       ResIndirect = com.ibm.ws.injectionengine.osgi.internal.IndirectJndiLookupReferenceFactoryImpl@50ce1ba9
+ =       ResRef      = com.ibm.ws.injectionengine.osgi.internal.ResRefReferenceFactoryImpl@6c2125f4
+ =       ResAuto     = com.ibm.ws.injectionengine.osgi.internal.ResAutoLinkReferenceFactoryImpl@33cd398a
+ =       EJBLink     = com.ibm.ws.injectionengine.osgi.internal.EJBLinkReferenceFactoryImpl@60a40ed3
+ =       MBLink      = com.ibm.ws.injectionengine.factory.MBLinkReferenceFactoryImpl@4017523d
+ = 
+ =    Actual Factories : 
+ =       com.ibm.ws.ejbcontainer.injection.factory.MBLinkReferenceFactoryImpl@257cd14e
+ = 
+ =    Registered Processors : 
+ =       javax.annotation.Resource : com.ibm.ws.injectionengine.processor.ResourceProcessorProvider@7f27bd02
+ =       javax.ws.rs.MatrixParam : com.ibm.ws.jaxrs20.component.injection.MatrixParamProcessorProvider@3f35f6a3
+ =       javax.ws.rs.core.Context : com.ibm.ws.jaxrs20.component.injection.ContextProcessorProvider@4549ddc2
+ =       javax.ws.rs.CookieParam : com.ibm.ws.jaxrs20.component.injection.CookieParamProcessorProvider@67c8284
+ =       javax.ws.rs.BeanParam : com.ibm.ws.jaxrs20.component.injection.BeanParamProcessProvider@44f1f0e4
+ =       javax.persistence.PersistenceUnit : com.ibm.ws.jpa.container.osgi.internal.JPAPUnitProcessorProvider@54618637
+ =       javax.ejb.EJB : com.ibm.ws.ejb.injection.processor.EJBProcessorProvider@5fcdf6b4
+ =       javax.ws.rs.HeaderParam : com.ibm.ws.jaxrs20.component.injection.HeaderParamProcessorProvider@3dc7276b
+ =       javax.ws.rs.QueryParam : com.ibm.ws.jaxrs20.component.injection.QueryParamProcessorProvider@76fa96e7
+ =       javax.annotation.sql.DataSourceDefinition : com.ibm.ws.injectionengine.processor.DataSourceDefinitionProcessorProvider@2e72e631
+ =       javax.persistence.PersistenceContext : com.ibm.ws.jpa.container.osgi.internal.JPAPCtxtProcessorProvider@1ebacd1d
+ =       javax.inject.Inject : com.ibm.ws.cdi.impl.inject.InjectProcessorProvider@1ac25dde
+ =       javax.ws.rs.PathParam : com.ibm.ws.jaxrs20.component.injection.PathParamProcessorProvider@38adbdcf
+ = 
+ =    Registered Object Factories : 
+ = 
+ =    Registered No-Override Object Factories : 
+ =       javax.annotation.Resource
+ =          javax.enterprise.inject.spi.BeanManager : com.ibm.ws.cdi.jndi.liberty.BeanManagerObjectFactoryInfo@1579785
+ =          javax.transaction.UserTransaction : com.ibm.ws.transaction.services.TransactionObjectFactoryInfo@49cd7097
+ =          com.ibm.websphere.ejbcontainer.SessionContextExtension : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@41e9e8dd[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          javax.ejb.MessageDrivenContext : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@14ff76ea[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          com.ibm.websphere.ejbcontainer.MessageDrivenContextExtension : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@2929304f[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          javax.validation.Validator : com.ibm.ws.beanvalidation.ValidatorObjectFactoryInfo@bc2a435
+ =          javax.ejb.SessionContext : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@5e30a90[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          javax.validation.ValidatorFactory : com.ibm.ws.beanvalidation.ValidatorFactoryObjectFactoryInfo@6ac474e0
+ =          javax.ejb.EJBContext : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@a8f8abf[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          javax.transaction.TransactionSynchronizationRegistry : com.ibm.ws.transaction.services.TransactionSynchronizationRegistryObjectFactoryInfo@147264d7
+ =          javax.ejb.EntityContext : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@9585b43[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          javax.ejb.TimerService : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@40f25dfc[class com.ibm.ws.ejbcontainer.injection.factory.TimerServiceObjectFactory, null]
+ =          com.ibm.websphere.ejbcontainer.EntityContextExtension : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@365efd2f[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          com.ibm.websphere.ejbcontainer.EJBContextExtension : com.ibm.ws.injectionengine.ObjectFactoryInfoImpl@318d73ef[class com.ibm.ws.ejbcontainer.injection.factory.EJBContextObjectFactory, null]
+ =          com.ibm.wsspi.uow.UOWManager : com.ibm.ws.transaction.services.UOWManagerObjectFactoryInfo@7a44a4de
+ = 
+ =    Registered Override Reference Factories : 
+ = 
+ =    Registered MetaDataListeners : 
+ =       com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl@288b1bd7
+ =       com.ibm.ws.cdi.impl.CDIContainerImpl@69fd2c6c
+ = 
+ =    isEmbeddable    : false
+ = 
+ = *** InjectionEngine Dump Complete ***
+ = 
+ = *** InjectionDiagnosticModule Dump Complete ***
++ Data for directive [Default] obtained. = 
+==> Dump complete for com.ibm.ws.injectionengine.ffdc.InjectionDiagnosticModule  = Thu Apr 20 20:22:31 EEST 2017
