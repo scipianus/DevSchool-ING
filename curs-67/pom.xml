@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>curs-6</artifactId>
+    <artifactId>curs-67</artifactId>
     <packaging>war</packaging>
 
     <dependencies>

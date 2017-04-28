@@ -22,4 +22,9 @@ public class EmployeeFacadeImpl implements EmployeeFacade {
         Query query = entityManager.createQuery("SELECT e FROM Employee e");
         return (List<Employee>) query.getResultList();
     }
+
+    @Override
+    public void addEmployee(Employee employee) {
+        entityManager.persist(employee);
+    }
 }
