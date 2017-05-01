@@ -1,0 +1,42 @@
+<h1 class="text-center">Add employee</h1>
+<form class="form-horizontal" novalidate>
+    <div class="form-group has-feedback" ng-class="vm.validationClassId(vm.newEmployee.id)">
+        <label class="control-label col-sm-4" for="id">Id:</label>
+        <div class="col-sm-4">
+            <input type="number" min="1" step="1" ng-model="vm.newEmployee.id" class="form-control" id="id"
+                   placeholder="Enter id" required>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-hide="vm.isValidId(vm.newEmployee.id)"></span>
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="vm.isValidId(vm.newEmployee.id)"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" ng-class="vm.validationClassName(vm.newEmployee.name)">
+        <label class="control-label col-sm-4" for="name">Name:</label>
+        <div class="col-sm-4">
+            <input type="text" ng-model="vm.newEmployee.name" class="form-control" id="name" placeholder="Enter name"
+                   required>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-hide="vm.isValidName(vm.newEmployee.name)"></span>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-show="vm.isValidName(vm.newEmployee.name)"></span>
+        </div>
+    </div>
+    <div class="form-group has-feedback" ng-class="vm.validationClassSalary(vm.newEmployee.salary)">
+        <label class="control-label col-sm-4" for="salary">Salary:</label>
+        <div class="col-sm-4">
+            <input type="number" ng-model="vm.newEmployee.salary" min="0" step="1" class="form-control" id="salary"
+                   required>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-hide="vm.isValidSalary(vm.newEmployee.salary)"></span>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-show="vm.isValidSalary(vm.newEmployee.salary)"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="text-center">
+            <button ng-click="vm.goToList()" class="btn btn-danger">Back</button>
+            <button type="submit" ng-click="vm.add(vm.newEmployee)" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</form>

@@ -13,4 +13,6 @@ public interface EmployeeFacade {
     List<Employee> getEmployees();
 
     void addEmployee(Employee employee);
+
+    void delete(Employee employee);
 }

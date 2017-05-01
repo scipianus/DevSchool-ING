@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="employeeApp">
+<head>
+    <base href="/employees/employees.html">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employees</title>
+    <link rel="stylesheet" href="resources/vendor/bootstrap-css/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/vendor/bootstrap-css/css/bootstrap-theme.css"/>
+</head>
+<body ng-controller="EmployeeCtrl as vm">
+
+<ng-view></ng-view>
+
+<script type="text/javascript" src="resources/vendor/angular/angular.js"></script>
+<script type="text/javascript" src="resources/vendor/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="resources/js/app.module.js"></script>
+<script type="text/javascript" src="resources/js/app.config.js"></script>
+<script type="text/javascript" src="resources/js/app.controller.js"></script>
+</body>
+</html>
