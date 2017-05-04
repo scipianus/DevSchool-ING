@@ -1,0 +1,10 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      2    5/1/17 14:30:54:235 EEST    5/1/17 14:31:22:818 EEST javax.transaction.RollbackException com.ibm.ejs.csi.TranStrategy.commit 294
+                                                                            - D:\Cloud Mail.Ru\Informatica\ING DevSchool\devschool-3\wlp\usr\servers\devschool-5\logs\ffdc\ffdc_17.05.01_14.30.54.0.log
+     1      2    5/1/17 14:30:54:264 EEST    5/1/17 14:31:22:818 EEST com.ibm.websphere.csi.CSITransactionRolledbackException com.ibm.ejs.container.EJSContainer.postInvoke 2326
+                                                                            - D:\Cloud Mail.Ru\Informatica\ING DevSchool\devschool-3\wlp\usr\servers\devschool-5\logs\ffdc\ffdc_17.05.01_14.30.54.1.log
+     2      2    5/1/17 14:30:54:440 EEST    5/1/17 14:31:22:823 EEST javax.ejb.EJBTransactionRolledbackException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1105
+                                                                            - D:\Cloud Mail.Ru\Informatica\ING DevSchool\devschool-3\wlp\usr\servers\devschool-5\logs\ffdc\ffdc_17.05.01_14.30.54.2.log
+------+------+---------------------------+---------------------------+---------------------------
